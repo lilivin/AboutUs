@@ -211,6 +211,9 @@ body {
         &__answers {
             margin: 0 auto;
             text-align: left;
+            div {
+                margin: 5px 0;
+            }
         }
         &__button {
             @include button();

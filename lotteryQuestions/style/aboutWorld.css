@@ -336,6 +336,10 @@ body {
   text-align: left;
 }
 
+.mainSection .questionsSection__answers div {
+  margin: 5px 0;
+}
+
 .mainSection .questionsSection__button {
   margin: 0 auto;
   width: 200px;

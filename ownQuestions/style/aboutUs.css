@@ -225,6 +225,10 @@ body {
   padding: 0 20px;
 }
 
+.mainSection .gameSection__answers div {
+  margin: 5px 0;
+}
+
 @media (max-width: 360px) {
   .mainSection .gameSection__answers {
     font-size: 14px;
