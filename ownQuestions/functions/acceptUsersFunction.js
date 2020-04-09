@@ -3,7 +3,8 @@
 function acceptUsersFunction() {
     if(namesArray.length >=2) {
         addNameSection.style.display = "none";
-        startSection.style.display = "grid"
+        startSection.style.display = "grid";
+        imie.innerHTML="";
         for(let index=0; index < namesArray.length; index++) {
             let p = document.createElement("option");
             p.value = namesArray[index];

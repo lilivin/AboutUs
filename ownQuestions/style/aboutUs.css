@@ -1,3 +1,22 @@
+input[type="radio"]:after {
+  background-color: white;
+  border-radius: 25px;
+  content: '';
+  display: block;
+  height: 17px;
+  left: -1px;
+  position: relative;
+  top: -1px;
+  width: 17px;
+}
+
+input[type="radio"]:checked:after {
+  width: 10px;
+  height: 10px;
+  border: 4px white solid;
+  background: #AC3B61;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -50,6 +69,7 @@ body {
 .mainSection .addName__input {
   width: 300px;
   height: 25px;
+  padding: 0 5px;
   border: 2px solid black;
 }
 
@@ -66,6 +86,11 @@ body {
   font-size: 17px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+}
+
+.mainSection .addName__button a {
+  color: white;
+  text-decoration: none;
 }
 
 .mainSection .addName__button:hover {
@@ -106,11 +131,12 @@ body {
 .mainSection .addQuestion__input {
   width: 300px;
   height: 25px;
+  padding: 0 5px;
   border: 2px solid black;
 }
 
 .mainSection .addQuestion__input--select {
-  width: 300px;
+  width: 310px;
   height: 30px;
   border: 2px solid black;
 }
@@ -141,6 +167,11 @@ body {
   transition: .3s ease;
 }
 
+.mainSection .addQuestion__button a {
+  color: white;
+  text-decoration: none;
+}
+
 .mainSection .addQuestion__button:hover {
   background: #f3776c;
 }
@@ -151,8 +182,8 @@ body {
   text-align: center;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100px 100px 200px auto 100px;
-      grid-template-rows: 100px 100px 200px auto 100px;
+  -ms-grid-rows: 100px 100px 100px auto 100px;
+      grid-template-rows: 100px 100px 100px auto 100px;
   min-height: 90vh;
 }
 
@@ -160,8 +191,20 @@ body {
   font-size: 36px;
 }
 
+@media (max-width: 360px) {
+  .mainSection .gameSection__player {
+    font-size: 26px;
+  }
+}
+
 .mainSection .gameSection__name {
   font-size: 36px;
+}
+
+@media (max-width: 360px) {
+  .mainSection .gameSection__name {
+    font-size: 26px;
+  }
 }
 
 .mainSection .gameSection__question {
@@ -169,10 +212,24 @@ body {
   padding: 0 15px;
 }
 
+@media (max-width: 360px) {
+  .mainSection .gameSection__question {
+    font-size: 24px;
+  }
+}
+
 .mainSection .gameSection__answers {
-  margin: 0 auto;
+  margin: auto auto;
   text-align: left;
   font-size: 20px;
+  padding: 0 20px;
+}
+
+@media (max-width: 360px) {
+  .mainSection .gameSection__answers {
+    font-size: 14px;
+    padding: 0 6px;
+  }
 }
 
 .mainSection .gameSection__button {
@@ -191,8 +248,20 @@ body {
   margin: auto auto;
 }
 
+.mainSection .gameSection__button a {
+  color: white;
+  text-decoration: none;
+}
+
 .mainSection .gameSection__button:hover {
   background: #f3776c;
+}
+
+@media (max-width: 360px) {
+  .mainSection .gameSection {
+    -ms-grid-rows: 50px 50px auto auto 50px;
+        grid-template-rows: 50px 50px auto auto 50px;
+  }
 }
 
 .mainSection .resultSection {
@@ -237,6 +306,11 @@ body {
   font-size: 17px;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+}
+
+.mainSection .resultSection__button a {
+  color: white;
+  text-decoration: none;
 }
 
 .mainSection .resultSection__button:hover {

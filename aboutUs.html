@@ -14,7 +14,7 @@
             <h1 class="addName__header">Wpisz imiona wszystkich graczy</h1>
             <div>
                 <label class="addName__label" for="imie2">Wpisz imię:</label>
-                <input class="addName__input" type="text" id="imie2">
+                <input class="addName__input" type="text" id="imie2" placeholder="Wpisz imię...">
             </div>
             <button class="addName__button" id="addNameButton">Dodaj</button>
             <button class="addName__button" id="startButton">Start</button>
@@ -72,7 +72,7 @@
             </div>
             <button class="addQuestion__button" form="form1" id="checkButton">Dodaj pytanie</button>
             <button class="addQuestion__button" id="startGameButton">Start</button>
-            <button class="addQuestion__button" onclick="window.location.href='../index.html'">Powrót</button>
+            <button class="addQuestion__button"><a href="./index.html">Powrót</a></button>
         </div>
 
         
@@ -115,5 +115,6 @@
     <script src="./ownQuestions/functions/checkAnswerFunction.js"></script>
     <script src="./ownQuestions/functions/checkItFunction.js"></script>
     <script src="./ownQuestions/functions/startGameFunction.js"></script>
+    <script src="./ownQuestions/functions/playerValidationFunction.js"></script>
     <script src="./ownQuestions/aboutUs.js"></script>
 </html>

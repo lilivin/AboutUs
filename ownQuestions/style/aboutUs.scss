@@ -10,9 +10,32 @@
     font-weight: bold;
     font-size: 17px;
     transition: .3s ease;
+    a {
+        color: white;
+        text-decoration: none;
+    }
     &:hover {
         background:#f3776c;
     }
+}
+
+input[type="radio"]:after {
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    content: '';
+    display: block;
+    height: 17px;
+    left: -1px;
+    position: relative;
+    top: -1px;
+    width: 17px;
+}
+
+input[type="radio"]:checked:after {
+    width: 10px;
+    height: 10px;
+    border: 4px rgb(255, 255, 255) solid;
+    background: #AC3B61;
 }
 
 body {
@@ -56,6 +79,7 @@ body {
         &__input {
             width: 300px;
             height: 25px;
+            padding: 0 5px;
             border: 2px solid black;
         }
         &__button {
@@ -90,10 +114,11 @@ body {
         &__input {
             width: 300px;
             height: 25px;
+            padding: 0 5px;
             border: 2px solid black;
             &--select {
-                width: 300px;
-                height: 30px;;
+                width: 310px;
+                height: 30px;
                 border: 2px solid black;
             }
         }
@@ -112,26 +137,43 @@ body {
         display: grid;
         text-align: center;
         grid-template-columns: 1fr;
-        grid-template-rows: 100px 100px 200px auto 100px;
+        grid-template-rows: 100px 100px 100px auto 100px;
         min-height: 90vh;
         &__player {
             font-size: 36px;
+            @media (max-width: 360px) {
+                font-size: 26px;
+            }
         }
         &__name {
             font-size: 36px;
+            @media (max-width: 360px) {
+                font-size: 26px;
+            }
         }
         &__question {
             font-size: 34px;
             padding: 0 15px;
+            @media (max-width: 360px) {
+                font-size: 24px;
+            }
         }
         &__answers {
-            margin: 0 auto;
+            margin: auto auto;
             text-align: left;
             font-size: 20px;
+            padding: 0 20px;
+            @media(max-width: 360px) {
+                font-size: 14px;
+                padding: 0 6px;
+            }
         }
         &__button {
             @include button();
             margin: auto auto;
+        }
+        @media(max-width: 360px) {
+            grid-template-rows: 50px 50px auto auto 50px;
         }
     }
 

@@ -55,6 +55,11 @@ body {
   transition: .3s ease;
 }
 
+.rules__button a {
+  color: white;
+  text-decoration: none;
+}
+
 .rules__button:hover {
   background: #f3776c;
 }

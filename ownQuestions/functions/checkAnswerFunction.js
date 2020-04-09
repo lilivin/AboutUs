@@ -18,7 +18,7 @@ function checkAnswerFunction() {
     gameInfoSection.style.display = "none";
     CWar.style.display="inline";
     DWar.style.display="inline";
-    playerName.innerHTML = `Odpowiada: ${questions[i].imiePlayer}`;
+    playerName.innerHTML = questions[i].imiePlayer;
     questions.splice(i, 1);
     document.querySelector('input[name="answerValue"]:checked').checked = false;
 }

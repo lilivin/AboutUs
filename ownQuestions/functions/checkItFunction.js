@@ -28,7 +28,6 @@ function checkItFunction() {
                 kara
             }
     questions.push(question);
-    document.getElementById('imie').value = null;
     document.getElementById('pytanie').value = null;
     document.getElementById('odpA').value = null;
     document.getElementById('odpB').value = null;

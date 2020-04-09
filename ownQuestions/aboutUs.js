@@ -1,8 +1,5 @@
-//Tablice
-let questions = [];
-let namesArray = [];
-
 let i = 0;
+let playerNumber = 0;
 
 //Inputs
 let imie = document.getElementById('imie');
@@ -28,6 +25,10 @@ function newUser() {
     i = Math.floor(Math.random() * questions.length);
 }
 
+function newPlayer() {
+    playerNumber = Math.floor(Math.random() * namesArray.length);
+}
+
 //Dodawania imienia
 addNameButton.addEventListener("click", function() {
     let inputValue = document.getElementById('imie2').value;
@@ -45,19 +46,8 @@ startButton.addEventListener('click', acceptUsersFunction);
 //Dodawanie pytania
 checkButton.addEventListener('click', checkItFunction);
 
-//Zadawanie pytania
-startGameButton.addEventListener('click', function() {
-    if(questions.length>=2){
-    startSection.style.display = 'none';
-    document.getElementById('loseImg').style.display = "none";
-    document.getElementById('winImg').style.display = "none";
-    gameInfoSection.style.display = "grid";
-    document.getElementById('checkAnswerButton').style.display = "block";
-    startGameFunction();
-    } else {
-        alert("Brak pytań!");
-    }
-})
+//Zadawanie pytania i walidacja
+startGameButton.addEventListener('click', playerValidationFunction)
 
 //Sprawdzanie odpowiedzi
 checkAnswerButton.addEventListener('click', checkAnswerFunction);
