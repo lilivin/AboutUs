@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <title>AboutUS Beta - Pytania własne</title>
+    <link rel="stylesheet" type="text/css" href="../ownQuestions/style/aboutUs.css">
+    <link rel="shortcut icon" type="image/png" href="../img/LOGOaboutUS2.png">
+</head>
+<body>
+    <section id="mainSection" class="mainSection">
+        <div class="addName" id="addNameSection">
+            <h1 class="addName__header">Wpisz imiona wszystkich graczy</h1>
+            <div>
+                <label class="addName__label" for="imie2">Wpisz imię:</label>
+                <input class="addName__input" type="text" id="imie2">
+            </div>
+            <button class="addName__button" id="addNameButton">Dodaj</button>
+            <button class="addName__button" id="startButton">Start</button>
+        </div>
+
+        <div class="addQuestion" id="startSection">
+            <div>
+                <label class="addQuestion__label">Wybierz imie:</label>
+                <select class="addQuestion__input--select" id="imie">
+                </select>
+            </div>
+            <div>
+                <label class="addQuestion__label">Pytanie:</label>
+                <input class="addQuestion__input" type="text" name="pytanie" id="pytanie" placeholder="Wpisz pytanie" required>
+            </div>
+            <div>
+                <label class="addQuestion__label">Odpowiedź A:</label>
+                <input class="addQuestion__input" type="text" name="odpA" id="odpA" placeholder="Wpisz wariant A" required>
+            </div>
+            <div>
+                <label class="addQuestion__label">Odpowiedź B:</label>
+                <input class="addQuestion__input" type="text" name="odpB" id="odpB" placeholder="Wpisz wariant B" required>
+            </div>
+            <div>
+                <label class="addQuestion__label">Odpowiedź C:</label>
+                <input class="addQuestion__input" type="text" name="odpC" id="odpC" placeholder="Nieobowiązkowe">
+            </div>
+            <div>
+                <label class="addQuestion__label">Odpowiedź D:</label>
+                <input class="addQuestion__input" type="text" name="odpD" id="odpD" placeholder="Nieobowiązkowe">
+            </div>
+            <div>
+                <label class="addQuestion__label">Kara:</label>
+                <input class="addQuestion__input" type="text" name="odpD" id="kara" placeholder="Wypij shota / Wypij browara / Inna" required>
+            </div>
+                    
+            <label class="addQuestion__label--correct">Poprawna odpowiedź:</label>
+            <div class="addQuestion__answers">
+                <div>
+                    <input type="radio" id="AOpc" name="odpValue" value="A" required>
+                    <label for="AOpc">A</label>
+                </div>
+                <div>
+                    <input type="radio" id="BOpc" name="odpValue" value="B">
+                    <label for="BOpc">B</label>
+                </div>
+                <div>
+                    <input type="radio" id="COpc" name="odpValue" value="C">
+                    <label for="COpc">C</label>
+                </div>
+                <div>
+                    <input type="radio" id="DOpc" name="odpValue" value="D">
+                    <label for="DOpc">D</label>
+                </div>
+            </div>
+            <button class="addQuestion__button" form="form1" id="checkButton">Dodaj pytanie</button>
+            <button class="addQuestion__button" id="startGameButton">Start</button>
+            <button class="addQuestion__button" onclick="window.location.href='../index.html'">Powrót</button>
+        </div>
+
+        
+        <div class="gameSection" id="gameInfoSection" style="display: none;">
+            <p class="gameSection__player" id="playerName"></p>
+            <p class="gameSection__name" id="name"></p>
+            <p class="gameSection__question" id="Que"></p>
+            <div class="gameSection__answers">
+                <div>   
+                    <input type="radio" class="inputRadio" id="AWar" name="answerValue" value="A" required>
+                    <label id="WarA" for="AWar"></label>
+                </div>
+                <div>
+                    <input type="radio" class="inputRadio" id="BWar" name="answerValue" value="B">
+                    <label id="WarB" for="BWar"></label>
+                </div>
+                <div>
+                    <input type="radio" class="inputRadio" id="CWar" name="answerValue" value="C">
+                    <label id="WarC" for="CWar"></label>
+                </div>
+                <div>
+                    <input type="radio" class="inputRadio" id="DWar" name="answerValue" value="D">
+                    <label id="WarD" for="DWar"></label>
+                </div>
+            </div>
+            <button class="gameSection__button" id="checkAnswerButton">Odpowiedz</button>
+        </div>
+
+        <div class="resultSection" style="display: none" id="resultSection">
+            <div class="resultSection__result" id="win"></div>
+            <img class="resultSection__loseImg" src="../img/test3kubki.png" id="loseImg" alt="lose">
+            <img class="resultSection__winImg" src="../img/test3WINaboutUS.png" id="winImg" alt="win">
+            <button class="resultSection__button" id="nextButton">Kolejne pytanie</button>
+            <button class="resultSection__button" id="addQueButton">Dodaj pytanie</button>
+        </div>
+    </section>
+</body>
+    <script src="../ownQuestions/functions/nextQuestionFunction.js"></script>
+    <script src="../ownQuestions/functions/acceptUsersFunction.js"></script>
+    <script src="../ownQuestions/functions/checkAnswerFunction.js"></script>
+    <script src="../ownQuestions/functions/checkItFunction.js"></script>
+    <script src="../ownQuestions/functions/startGameFunction.js"></script>
+    <script src="../ownQuestions/aboutUs.js"></script>
+</html>

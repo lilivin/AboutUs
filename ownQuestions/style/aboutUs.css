@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../../img/BACKGROUNDaboutUS.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Sen', sans-serif;
+}
+
+.mainSection {
+  background: #f9a15d;
+  margin: 5vh auto;
+  background: radial-gradient(circle, #f9a15d 16%, #aa2716 100%);
+  width: 500px;
+  border-radius: 20px;
+  -webkit-box-shadow: 14px 18px 56px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 14px 18px 56px -2px rgba(0, 0, 0, 0.75);
+}
+
+.mainSection .addName {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto auto;
+  min-height: 90vh;
+}
+
+.mainSection .addName__header {
+  font-size: 42px;
+}
+
+.mainSection .addName__label {
+  display: block;
+  background-color: white;
+  width: 180px;
+  padding: 3px 0;
+  border-radius: 20px 20px 0 0;
+  margin: 20px auto 0;
+  border: 2px solid black;
+  border-bottom: none;
+}
+
+.mainSection .addName__label:nth-of-type(1) {
+  margin-top: 20px;
+}
+
+.mainSection .addName__input {
+  width: 300px;
+  height: 25px;
+  border: 2px solid black;
+}
+
+.mainSection .addName__button {
+  margin: 10px auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e84c3d;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.mainSection .addName__button:hover {
+  background: #f3776c;
+}
+
+.mainSection .addQuestion {
+  display: none;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto auto auto auto auto auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+  min-height: 90vh;
+}
+
+.mainSection .addQuestion__label {
+  display: block;
+  background-color: white;
+  width: 180px;
+  padding: 3px 0;
+  border-radius: 20px 20px 0 0;
+  margin: 20px auto 0;
+  border: 2px solid black;
+  border-bottom: none;
+}
+
+.mainSection .addQuestion__label--correct {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.mainSection .addQuestion__label:nth-of-type(1) {
+  margin-top: 20px;
+}
+
+.mainSection .addQuestion__input {
+  width: 300px;
+  height: 25px;
+  border: 2px solid black;
+}
+
+.mainSection .addQuestion__input--select {
+  width: 300px;
+  height: 30px;
+  border: 2px solid black;
+}
+
+.mainSection .addQuestion__answers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.mainSection .addQuestion__button {
+  margin: 10px auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e84c3d;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.mainSection .addQuestion__button:hover {
+  background: #f3776c;
+}
+
+.mainSection .gameSection {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 100px 100px 200px auto 100px;
+      grid-template-rows: 100px 100px 200px auto 100px;
+  min-height: 90vh;
+}
+
+.mainSection .gameSection__player {
+  font-size: 36px;
+}
+
+.mainSection .gameSection__name {
+  font-size: 36px;
+}
+
+.mainSection .gameSection__question {
+  font-size: 34px;
+  padding: 0 15px;
+}
+
+.mainSection .gameSection__answers {
+  margin: 0 auto;
+  text-align: left;
+  font-size: 20px;
+}
+
+.mainSection .gameSection__button {
+  margin: 10px auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e84c3d;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  margin: auto auto;
+}
+
+.mainSection .gameSection__button:hover {
+  background: #f3776c;
+}
+
+.mainSection .resultSection {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto 100px 100px;
+      grid-template-rows: auto auto 100px 100px;
+  min-height: 90vh;
+}
+
+.mainSection .resultSection__result {
+  font-size: 32px;
+  text-align: center;
+  padding: 15px 15px;
+}
+
+.mainSection .resultSection__loseImg {
+  width: 300px;
+  display: none;
+  margin: 0 auto;
+}
+
+.mainSection .resultSection__winImg {
+  width: 300px;
+  display: none;
+  margin: 0 auto;
+}
+
+.mainSection .resultSection__button {
+  margin: 10px auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e84c3d;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.mainSection .resultSection__button:hover {
+  background: #f3776c;
+}
+
+@media (max-width: 700px) {
+  .mainSection {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+/*# sourceMappingURL=aboutUs.css.map */

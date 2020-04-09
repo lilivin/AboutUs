@@ -1,0 +1,93 @@
+@mixin button {
+    margin: 0 auto;
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    background:#e84c3d;
+    color:white;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    transition: .3s ease;
+    &:hover {
+        background:#f3776c;
+    }
+}
+
+@mixin button--small {
+    margin: 0 auto;
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    background:#e84c3d;
+    color:white;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    transition: .3s ease;
+    &:hover {
+        background:#f3776c;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../../img/BACKGROUNDaboutUS.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Sen', sans-serif;
+}
+
+.menu {
+    display: grid;
+    margin: 5vh auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 100px 100px;
+    background: rgb(249,161,93);
+    background: radial-gradient(circle, rgba(249,161,93,1) 16%, rgba(170,39,22,1) 100%);
+    width: 500px;
+    min-height: 90vh;
+    border-radius: 20px;
+    box-shadow: 14px 18px 56px -2px rgba(0,0,0,0.75);
+    &__logo {
+        display: block;
+        width: 200px;
+        margin: auto auto;
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    &__header {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        text-align: center;
+        h1 {
+            font-size: 48px;
+        }
+    }
+    &__button {
+        @include button();
+        &--rules {
+            grid-column: 1/3;
+            @include button();
+            
+            @media(max-width: 420px) {
+                @include button--small();
+            }
+        }
+        @media(max-width: 420px) {
+            @include button--small();
+        }
+    }
+    @media(max-width: 700px) {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
+    @media(max-width: 420px) {
+        grid-template-rows: auto auto 70px 70px;
+    }
+}

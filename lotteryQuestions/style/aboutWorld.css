@@ -1,0 +1,396 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../../img/BACKGROUNDaboutUS.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Sen', sans-serif;
+}
+
+.mainSection {
+  background: #f9a15d;
+  margin: 5vh auto;
+  background: radial-gradient(circle, #f9a15d 16%, #aa2716 100%);
+  width: 500px;
+  border-radius: 20px;
+  -webkit-box-shadow: 14px 18px 56px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 14px 18px 56px -2px rgba(0, 0, 0, 0.75);
+}
+
+.mainSection .welcomeSection {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 200px auto auto auto;
+      grid-template-rows: 200px auto auto auto;
+  min-height: 90vh;
+}
+
+.mainSection .welcomeSection__header {
+  font-size: 34px;
+}
+
+.mainSection .welcomeSection__description {
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+.mainSection .welcomeSection .gameMode {
+  padding: 20px 0;
+}
+
+.mainSection .welcomeSection .gameMode__header {
+  font-size: 24px;
+}
+
+.mainSection .welcomeSection .gameMode__description {
+  padding: 0 10px;
+  font-size: 19px;
+}
+
+.mainSection .welcomeSection .gameMode__button {
+  margin: 0 auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e84c3d;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.mainSection .welcomeSection .gameMode__button:hover {
+  background: #f3776c;
+}
+
+@media (max-width: 460px) {
+  .mainSection .welcomeSection {
+    -ms-grid-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
+  }
+}
+
+.mainSection .addPlayers {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 300px 40px auto auto auto;
+      grid-template-rows: 300px 40px auto auto auto;
+  min-height: 90vh;
+}
+
+.mainSection .addPlayers__header {
+  font-size: 36px;
+}
+
+.mainSection .addPlayers__label {
+  text-align: center;
+  padding: 10px 0;
+  border: 2px solid black;
+  border-bottom: none;
+  width: 250px;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+  .mainSection .addPlayers__label {
+    width: 150px;
+  }
+}
+
+.mainSection .addPlayers__input {
+  width: 400px;
+  height: 30px;
+  border: 2px solid black;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+  .mainSection .addPlayers__input {
+    width: 280px;
+  }
+}
+
+.mainSection .addPlayers__button {
+  margin: 0 auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e84c3d;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.mainSection .addPlayers__button:hover {
+  background: #f3776c;
+}
+
+@media (max-width: 700px) {
+  .mainSection .addPlayers {
+    -ms-grid-rows: auto 40px auto auto auto;
+        grid-template-rows: auto 40px auto auto auto;
+  }
+}
+
+.mainSection .playersPoints {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 200px auto auto auto;
+      grid-template-rows: 200px auto auto auto;
+  min-height: 90vh;
+}
+
+.mainSection .playersPoints__header {
+  font-size: 36px;
+}
+
+.mainSection .playersPoints__points {
+  font-size: 24px;
+}
+
+.mainSection .playersPoints__button {
+  margin: 0 auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e84c3d;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.mainSection .playersPoints__button:hover {
+  background: #f3776c;
+}
+
+.mainSection .myPunishments {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto 35px 50px 100px auto;
+      grid-template-rows: auto 35px 50px 100px auto;
+  min-height: 90vh;
+}
+
+.mainSection .myPunishments__header {
+  display: block;
+  margin: auto auto;
+  font-size: 54px;
+}
+
+@media (max-width: 450px) {
+  .mainSection .myPunishments__header {
+    font-size: 42px;
+  }
+}
+
+.mainSection .myPunishments__label {
+  text-align: center;
+  padding: 10px 0;
+  border: 2px solid black;
+  border-bottom: none;
+  width: 250px;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+  .mainSection .myPunishments__label {
+    width: 150px;
+  }
+}
+
+.mainSection .myPunishments__input {
+  width: 400px;
+  height: 30px;
+  border: 2px solid black;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+  .mainSection .myPunishments__input {
+    width: 300px;
+  }
+}
+
+.mainSection .myPunishments__button {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e84c3d;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  margin: auto auto;
+}
+
+.mainSection .myPunishments__button:hover {
+  background: #f3776c;
+}
+
+.mainSection .questionsSection {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 200px 70px auto auto;
+      grid-template-rows: 200px 70px auto auto;
+  min-height: 90vh;
+}
+
+.mainSection .questionsSection__category {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.mainSection .questionsSection__question {
+  text-align: center;
+  margin: auto auto;
+  padding: 0 50px;
+}
+
+.mainSection .questionsSection__player {
+  text-align: center;
+  font-size: 24px;
+}
+
+.mainSection .questionsSection__answers {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.mainSection .questionsSection__button {
+  margin: 0 auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e84c3d;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  margin: auto auto;
+}
+
+.mainSection .questionsSection__button:hover {
+  background: #f3776c;
+}
+
+@media (max-width: 400px) {
+  .mainSection .questionsSection {
+    -ms-grid-rows: 100px 70px auto 100px;
+        grid-template-rows: 100px 70px auto 100px;
+  }
+}
+
+.mainSection .resultSection {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 50px 50px auto 100px 100px;
+      grid-template-rows: 50px 50px auto 100px 100px;
+  min-height: 90vh;
+}
+
+.mainSection .resultSection__result {
+  font-size: 36px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.mainSection .resultSection__punishment {
+  padding: 10px 0;
+  font-size: 28px;
+  text-align: center;
+}
+
+.mainSection .resultSection__loseImg {
+  display: block;
+  margin: auto auto;
+  width: 300px;
+  display: none;
+}
+
+.mainSection .resultSection__winImg {
+  display: block;
+  margin: auto auto;
+  width: 300px;
+  display: none;
+}
+
+.mainSection .resultSection__button {
+  margin: 0 auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e84c3d;
+  color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.mainSection .resultSection__button:hover {
+  background: #f3776c;
+}
+
+@media (max-width: 700px) {
+  .mainSection .resultSection {
+    -ms-grid-rows: auto auto auto 100px 100px;
+        grid-template-rows: auto auto auto 100px 100px;
+  }
+}
+
+@media (max-width: 700px) {
+  .mainSection {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+/*# sourceMappingURL=aboutWorld.css.map */

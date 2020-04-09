@@ -1,0 +1,242 @@
+@mixin button {
+    margin: 0 auto;
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    background:#e84c3d;
+    color:white;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    transition: .3s ease;
+    &:hover {
+        background:#f3776c;
+    }
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../../img/BACKGROUNDaboutUS.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Sen', sans-serif;
+}
+
+
+.mainSection {
+    background: rgb(249,161,93);
+    margin: 5vh auto;
+    background: radial-gradient(circle, rgba(249,161,93,1) 16%, rgba(170,39,22,1) 100%);
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 14px 18px 56px -2px rgba(0,0,0,0.75);
+    .welcomeSection {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px auto auto auto;
+        min-height: 90vh;
+        &__header {
+            font-size: 34px;
+        }
+        &__description {
+            font-size: 20px;
+            padding: 0 20px;
+        }
+        .gameMode {
+            padding: 20px 0;
+            &__header {
+                font-size: 24px;
+            }
+            &__description {
+                padding: 0 10px;
+                font-size: 19px;
+            }
+            &__button {
+                @include button();
+            }
+        }
+        @media (max-width: 460px) {
+            grid-template-rows: auto auto auto auto;
+        }
+    }
+
+    .addPlayers {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 40px auto auto auto;
+        min-height: 90vh;
+        &__header {
+            font-size: 36px;
+        }
+        &__label {
+            text-align: center;
+            padding: 10px 0;
+            border: 2px solid black;
+            border-bottom: none;
+            width: 250px;
+            background-color: white;
+            border-radius: 20px 20px 0 0;
+            margin: 0 auto;
+            @media (max-width: 450px) {
+                width: 150px;
+            }
+        }
+        &__input {
+            width: 400px;
+            height: 30px;
+            border: 2px solid black;
+            padding: 0 10px;
+            margin: 0 auto;
+            @media (max-width: 450px) {
+                width: 280px;
+            }
+        }
+        &__button {
+            @include button();
+        }
+        @media (max-width: 700px) {
+            grid-template-rows: auto 40px auto auto auto;
+        }
+    }
+
+    .playersPoints {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px auto auto auto;
+        min-height: 90vh;
+        &__header {
+            font-size: 36px;
+        }
+        &__points {
+            font-size: 24px;
+        }
+        &__button {
+            @include button();
+        }
+    }
+
+    .myPunishments {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 35px 50px 100px auto;
+        min-height: 90vh;
+        &__header {
+            display: block;
+            margin: auto auto;
+            font-size: 54px;
+            @media (max-width: 450px) {
+                font-size: 42px;
+            }
+        }
+        &__label {
+            text-align: center;
+            padding: 10px 0;
+            border: 2px solid black;
+            border-bottom: none;
+            width: 250px;
+            background-color: white;
+            border-radius: 20px 20px 0 0;
+            margin: 0 auto;
+            @media (max-width: 450px) {
+                width: 150px;
+            }
+        }
+        &__input {
+            width: 400px;
+            height: 30px;
+            border: 2px solid black;
+            text-align: center;
+            align-items: center;
+            margin: 0 auto;
+            @media (max-width: 450px) {
+                width: 300px;
+            }
+        }
+        &__button {
+            display: block;
+            @include button();
+            margin: auto auto;
+        }
+    }
+
+    .questionsSection {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 70px auto auto;
+        min-height: 90vh;
+        &__category {
+            text-align: center;
+            font-size: 42px;
+            font-weight: bold;
+        }
+        &__question {
+            text-align: center;
+            margin: auto auto;
+            padding: 0 50px;
+        }
+        &__player {
+            text-align: center;
+            font-size: 24px;
+        }
+        &__answers {
+            margin: 0 auto;
+            text-align: left;
+        }
+        &__button {
+            @include button();
+            margin: auto auto;
+        }
+        @media (max-width: 400px) {
+            grid-template-rows: 100px 70px auto 100px;
+        }
+    }
+
+
+    .resultSection {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px auto 100px 100px;
+        min-height: 90vh;
+        &__result {
+            font-size: 36px;
+            text-align: center;
+            padding: 10px 0;
+        }
+        &__punishment {
+            padding: 10px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+        &__loseImg {
+            display: block;
+            margin: auto auto;
+            width: 300px;
+            display: none;
+        }
+        &__winImg {
+            display: block;
+            margin: auto auto;
+            width: 300px;
+            display: none;
+        }
+        &__button {
+            @include button()
+        }
+        @media (max-width: 700px) {
+            grid-template-rows: auto auto auto 100px 100px;
+        }
+    }
+    @media (max-width: 700px) {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
+}

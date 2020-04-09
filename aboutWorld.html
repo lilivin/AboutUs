@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <title>AboutUs Beta - Pytania losowe</title>
+    <link rel="stylesheet" type="text/css" href="./lotteryQuestions/style/aboutWorld.css">
+    <link rel="shortcut icon" type="image/png" href="../img/LOGOaboutUS2.png">
+</head>
+
+<body>
+    <section class="mainSection">
+        <div class="welcomeSection" id="welcomeSection">
+            <div>
+                <h1 class="welcomeSection__header">Pytania losowe<h1>
+                <p class="welcomeSection__description" >W tej opcji gry odpowiadasz na pytania na temat świata i nauki. Dedykujemy ten tryb gry osobą, którym
+                    nie chce się wymyślać pytań o sobie.</p>
+            </div>
+            
+            <div class="gameMode">
+                <h2 class="gameMode__header">Rywalizacja</h2>
+                <p class="gameMode__description">W tym trybie gry możecie rywalizować ze sobą bez kar za błędną odpowiedź.</p>
+                <button class="gameMode__button" id="startComptetitionButton">Rywalizacja</button>
+            </div>
+
+            <div class="gameMode">
+                <h2 class="gameMode__header">Własne zestaw</h2>
+                <p class="gameMode__description">W tym trybie możecie stworzyć własny zbiór kar, które będą losowo dobieranie w przypadku złej odpowiedzi na pytanie.</p>
+                <button class="gameMode__button" id="startMyQuestionsButton">Własny zestaw</button>
+            </div>
+
+            <div class="gameMode">
+                <h2 class="gameMode__header">Kary Alkoholowe</h2>
+                <p class="gameMode__description">W tym trybie przygotowaliśmy dla Was kilka podstawowych kar alkoholowych za złą odpowiedź.</p>
+                <button class="gameMode__button" id="startAlcoholQuestionsButton">Kary Alkoholowe</button>
+            </div>
+
+            <div class="gameMode">
+                <h2 class="gameMode__header">Wyzwania</h2>
+                <p class="gameMode__description">W tym trybie przygotowaliśmy dla Was kilka wyzwań.</p>
+                <button class="gameMode__button" id="startChallangeQuestionsButton">Wyzwania</button>
+            </div>
+        </div>
+
+        <div class="addPlayers" id="addPlayersSection" style="display: none;">
+            <h1 class="addPlayers__header">Wpisz imiona wszystkich graczy</h1>
+            <label class="addPlayers__label" for="player">Wpisz imię:</label>
+            <input class="addPlayers__input" type="text" placeholder="Wpisz imię..." id="player">
+            <button class="addPlayers__button" id="addPlayerButton">Dodaj</button>
+            <button class="addPlayers__button" id="startGameButton">Start</button>
+        </div>
+
+        <div class="playersPoints" id="pointsPlayerSection" style="display: none;">
+            <h1 class="playersPoints__header">Ranking</h1>
+            <div class="playersPoints__points" id="pointsRank">
+            </div>
+            <button class="playersPoints__button" id="nextQuestionButton">Następne pytanie</button>
+            <button class="playersPoints__button" onclick="window.location.href='../index.html'">Koniec</button>
+        </div>
+
+        <div class="myPunishments" id="addPunishmentSection" style="display: none;">
+            <h1 class='myPunishments__header'>Stwórz własny zestaw kar</h1>
+            <label class="myPunishments__label" for="myPunishmentAdd">Kara</label>
+            <input class="myPunishments__input" type="text" id="myPunishmentAdd" placeholder="Wpisz kare...">
+            <button class="myPunishments__button" id="addPunishmentButton">Dodaj</button>    
+            <button class="myPunishments__button" id="finishAddPunishmentsButton">Start</button>
+        </div>
+
+        <div class="questionsSection" id="gameSection" style="display: none;">
+            <p class="questionsSection__category" id="category"></p>
+            <p class="questionsSection__player" id="answerPlayer"></p>
+            <p class="questionsSection__question" id="QueDefaultQuestions"></p>
+            <div class="questionsSection__answers">
+                <div>
+                    <input type="radio" class="inputRadio" id="AWarDefaultQuestions" name="answerValueDefaultQuestions"
+                        value="A" required>
+                    <label id="WarADefaultQuestions" for="AWarDefaultQuestions">1</label>
+                </div>
+                <div>
+                    <input type="radio" class="inputRadio" id="BWarDefaultQuestions" name="answerValueDefaultQuestions"
+                        value="B">
+                    <label id="WarBDefaultQuestions" for="BWarDefaultQuestions">2</label>
+                </div>
+                <div>
+                    <input type="radio" class="inputRadio" id="CWarDefaultQuestions" name="answerValueDefaultQuestions"
+                        value="C">
+                    <label id="WarCDefaultQuestions" for="CWarDefaultQuestions">3</label>
+                </div>
+                <div>
+                    <input type="radio" class="inputRadio" id="DWarDefaultQuestions" name="answerValueDefaultQuestions"
+                        value="D">
+                    <label id="WarDDefaultQuestions" for="DWarDefaultQuestions">4</label>
+                </div>
+            </div>
+            <button class="questionsSection__button" id="checkAnswerDefaultQuestionsButton">Odpowiedz</button>
+        </div>
+
+
+        <div class="resultSection" style="display: none" id="resultSection">
+            <div class="resultSection__result" id="winDefaultQuestions"></div>
+            <div class="resultSection__punishment" id="punishment"></div>
+            <img class="resultSection__loseImg" src="../img/test3kubki.png" id="loseImgDefaultQuestions" alt="lose">
+            <img class="resultSection__winImg" src="../img/test3WINaboutUS.png" id="winImgDefaultQuestions" alt="win">
+            <button class="resultSection__button" id="nextDefaultQuestionButton">Kolejne pytanie</button>
+            <button class="resultSection__button" onclick="window.location.href='../index.html'">Powrót</button>
+        </div>
+    </section>
+</body>
+<script src="../lotteryQuestions/arrays.js"></script>
+<script src="../lotteryQuestions/functions/lotteryFunctions.js"></script>
+<script src="../lotteryQuestions/functions/startCompetitionFunction.js"></script>
+<script src="../lotteryQuestions/functions/startGameFunction.js"></script>
+<script src="../lotteryQuestions/functions/nextQuestionFunction.js"></script>
+<script src="../lotteryQuestions/functions/checkAnswerFunction.js"></script>
+<script src="../lotteryQuestions/questinsArray.js"></script>
+<script src="../lotteryQuestions/aboutWorld.js"></script>
+
+</html>
