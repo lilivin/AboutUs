@@ -13,6 +13,7 @@ function nextQuestionFunction() {
             playerNumber = 0;
         }
     } else {
+        punishment.innerHTML='';
         gameSection.style.display = "grid";
         resultSection.style.display = "none";
         loseImgDefaultQuestions.style.display = "none";

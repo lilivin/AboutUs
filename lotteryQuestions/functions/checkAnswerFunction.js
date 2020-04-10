@@ -27,6 +27,7 @@ function checkAnswerFunction() {
             resultSection.style.display="grid";
             gameSection.style.display = "none";
             winImgDefaultQuestions.style.display = "block";
+            console.log('dobrze');
         } else {
             winDefaultQuestions.innerHTML = "Niestety! Przegrałeś.";
                 if(punishmentAlcoholNumber >= 0) {
@@ -36,6 +37,7 @@ function checkAnswerFunction() {
                 } else {
                     punishment.innerHTML = `Kara dla Ciebie to: ${myPunishments[punishmentMyNumber]}`;
             }
+            console.log('zle');
         resultSection.style.display="grid";
         gameSection.style.display = "none";
         loseImgDefaultQuestions.style.display = "block";
