@@ -13,6 +13,7 @@
     a {
         color: white;
         text-decoration: none;
+        display: block;
     }
     &:hover {
         background:#f3776c;
@@ -29,6 +30,10 @@ input[type="radio"]:after {
     position: relative;
     top: -1px;
     width: 17px;
+    @media(max-width: 360px) {
+        width: 12px;
+        height: 12px;
+    }
 }
 
 input[type="radio"]:checked:after {
@@ -36,6 +41,11 @@ input[type="radio"]:checked:after {
     height: 10px;
     border: 4px rgb(255, 255, 255) solid;
     background: #AC3B61;
+    @media(max-width: 360px) {
+        width: 8px;
+        height: 8px;
+        border: 3px rgb(255, 255, 255) solid;
+    }
 }
 
 body {
@@ -155,6 +165,8 @@ body {
             font-size: 34px;
             padding: 0 15px;
             @media (max-width: 360px) {
+                padding: 15px 15px;
+                margin: auto auto;
                 font-size: 24px;
             }
         }
@@ -176,7 +188,7 @@ body {
             margin: auto auto;
         }
         @media(max-width: 360px) {
-            grid-template-rows: 50px 50px auto auto 50px;
+            grid-template-rows: 70px 70px auto auto 50px;
         }
     }
 

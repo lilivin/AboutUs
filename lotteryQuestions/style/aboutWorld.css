@@ -10,11 +10,26 @@ input[type="radio"]:after {
   width: 17px;
 }
 
+@media (max-width: 360px) {
+  input[type="radio"]:after {
+    width: 12px;
+    height: 12px;
+  }
+}
+
 input[type="radio"]:checked:after {
   width: 10px;
   height: 10px;
   border: 4px white solid;
   background: #AC3B61;
+}
+
+@media (max-width: 360px) {
+  input[type="radio"]:checked:after {
+    width: 8px;
+    height: 8px;
+    border: 3px white solid;
+  }
 }
 
 body {
@@ -85,6 +100,7 @@ body {
 }
 
 .mainSection .welcomeSection .gameMode__button a {
+  display: block;
   color: white;
   text-decoration: none;
 }
@@ -162,6 +178,7 @@ body {
 }
 
 .mainSection .addPlayers__button a {
+  display: block;
   color: white;
   text-decoration: none;
 }
@@ -212,6 +229,7 @@ body {
 }
 
 .mainSection .playersPoints__button a {
+  display: block;
   color: white;
   text-decoration: none;
 }
@@ -296,6 +314,7 @@ body {
 }
 
 .mainSection .myPunishments__button a {
+  display: block;
   color: white;
   text-decoration: none;
 }
@@ -357,6 +376,7 @@ body {
 }
 
 .mainSection .questionsSection__button a {
+  display: block;
   color: white;
   text-decoration: none;
 }
@@ -424,6 +444,7 @@ body {
 }
 
 .mainSection .resultSection__button a {
+  display: block;
   color: white;
   text-decoration: none;
 }
